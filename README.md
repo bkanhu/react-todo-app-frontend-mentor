@@ -1,8 +1,14 @@
-# React + Vite
+# React TODOs App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend mentor challange project. Build with ReactJS and Vite.
 
-Currently, two official plugins are available:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95541c28-ff2d-49d4-912b-9b5dbea36b52/deploy-status)](https://app.netlify.com/sites/react-todos-app-fmc/deploys)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live](https://react-todos-app-fmc.netlify.app/)
+
+### Run locally:
+
+- Clone the repo
+- Navigate to repo using `cd <repo-name>`
+- Install required dependencies `npm i`
+- Run `npm run dev`
