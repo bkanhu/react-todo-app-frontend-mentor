@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 export default function Todo() {
   const [inputValue, setInputValue] = useState('');
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
+  // instead of using an empty array to initialize the todos, first check if the items is avaliable in localstorage.
+  const [todos, setTodos] = useState(() => {
+    return JSON.parse(localStorage.getItem('todos')) || [];
+  });
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
+  // press enter to add the todo
   const handleKeyPress = (event) => {
     if (event.key === 'Enter' && inputValue.trim() !== '') {
       setTodos([...todos, { text: inputValue.trim(), checked: false }]);
       setInputValue('');
     }
   };
-
-  useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos') || '[]');
-    setTodos(storedTodos);
-  }, []);
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
